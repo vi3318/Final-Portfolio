@@ -59,17 +59,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Highlight active link on scroll
   function highlightActiveLink() {
-    const scrollPosition = window.scrollY + (window.innerHeight / 2); // Adjusted scroll position to trigger earlier
-
+    const scrollPosition = window.scrollY + (window.innerHeight / 2);
+  
     navLinks.forEach(function(navLink) {
       const targetId = navLink.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
-
+  
       if (targetElement) {
-        const offsetTop = targetElement.offsetTop;
-        const offsetBottom = offsetTop + targetElement.offsetHeight;
-
-        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+        const rect = targetElement.getBoundingClientRect();
+        const offsetTop = rect.top + window.scrollY; // Calculate absolute top position
+  
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + rect.height) {
           navLinks.forEach(function(link) {
             link.parentNode.classList.remove("active");
           });
@@ -88,4 +88,3 @@ document.addEventListener("DOMContentLoaded", function() {
   // Change navbar background on page load
   changeNavbarBackground();
 });
-
