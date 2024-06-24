@@ -634,6 +634,22 @@ nav ul li a:hover {
     
   }
 
+  @media screen and (max-width: 396px) {
+
+    header .hero {
+      top: 0%;
+      transform: translate(-50%, -50%);
+    }
+    .wave {
+      right: 135px;
+    }
+    header{
+      height: 40vh !important;
+    
+    }
+
+  }
+
   @media screen and (max-width: 376px) {
 
     header .hero {
@@ -644,8 +660,6 @@ nav ul li a:hover {
       right: 135px;
     }
 
-  
-    
   }
   header .socials {
     position: absolute;
@@ -1038,7 +1052,7 @@ nav ul li a:hover {
   
   .about-heading {
     font-size: 36px;
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: 20px;
     text-align: center;
   }
