@@ -510,14 +510,15 @@ nav ul li a:hover {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   #nav {
-    width: 90%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
     max-width: 100%; /* Full width on smaller screens */
-    border-radius: 20px; /* Smaller border radius */
     padding: 8px 0; /* Adjust padding */
+    border-radius: 0px;
+    top: 0px;
   }
 
   nav ul {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: row !important; /* Stack items vertically */
     align-items: center; /* Center align items */
   }
 
@@ -575,9 +576,6 @@ nav ul li a:hover {
     .h2{
       font-size: 1.25rem;
     }
-    .hello{
-      font-size: 1.25rem;
-    }
     
   }
   header .hero {
@@ -619,6 +617,35 @@ nav ul li a:hover {
     z-index: 1; /* Ensure the wave icon is above the profile image */
   }
   
+  @media screen and (max-width: 440px) {
+
+    header .hero {
+      top: 0%;
+      transform: translate(-50%, -75%);
+    }
+    .wave {
+      right: 135px;
+    }
+
+    header{
+      height: 40vh !important;
+    }
+    
+  }
+
+  @media screen and (max-width: 376px) {
+
+    header .hero {
+      top: 0%;
+      transform: translate(-50%, -50%);
+    }
+    .wave {
+      right: 135px;
+    }
+
+  
+    
+  }
   header .socials {
     position: absolute;
     bottom: 40%;
