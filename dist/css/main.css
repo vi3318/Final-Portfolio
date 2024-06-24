@@ -442,13 +442,12 @@ header #particles-js canvas {
   height: 100%;
 }
 
-/* Sticky Navbar Styles */
 /* Navbar Styles */
 #nav {
   position: fixed;
   top: 20px;
-  width: 80%; /* Adjust width for smaller screens */
-  max-width: 400px; /* Example maximum width */
+  width: 80%; 
+  max-width: 400px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -550,6 +549,36 @@ nav ul li a:hover {
     font-size: 2rem;
     font-weight: bold;
 
+  }
+
+  @media screen and (max-width: 768px) {
+    .h2 {
+      font-size: 1.5rem;
+    }
+    .hello{
+      font-size: 1.5rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 500px) {
+    .h2 {
+      font-size: 1.25rem;
+    }
+    .hello{
+      font-size: 1.25rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 440px) {
+    .h2{
+      font-size: 1.25rem;
+    }
+    .hello{
+      font-size: 1.25rem;
+    }
+    
   }
   header .hero {
     z-index: 5;
@@ -1003,7 +1032,6 @@ nav ul li a:hover {
     visibility: visible;
   }
   
-  
   .about-container {
     width: 100%;
     margin: 0px 20px;
@@ -1027,7 +1055,7 @@ nav ul li a:hover {
     line-height: 1.6;
     text-align: left;
   }
-
+  
   .about-text {
     width: 50%;
     font-size: 18px;
@@ -1075,47 +1103,52 @@ nav ul li a:hover {
     font-weight: bold;
   }
   
-#aboutMe{
-  width: 100% !important;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  overflow: hidden !important;  
-}
-
-
-.theme-toggle {
-  position: sticky;
-  bottom: 20px; /* Distance from bottom */
-  right: 20px; /* Distance from right */
-  z-index: 1000; /* Ensure it's above other content */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  outline: none;
-  transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-#theme-icon {
-  width: 40px;
-  height: 40px;
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-  background-color:  #0E131F;
-  color: #ffffff;
-}
-
-.dark-mode .container {
-  background-color:  #0E131F;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.dark-mode #theme-icon {
-  filter: invert(100%);
-}
+  #aboutMe {
+    width: 100% !important;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    overflow: hidden !important;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  @media only screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Align items one below the other on smaller screens */
+      padding: 20px; /* Reduce padding for smaller screens */
+      margin: 0px 10px;
+    }
+  
+    .about-text {
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .education-card {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 20px; /* Add some bottom margin between cards */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .about-heading {
+      font-size: 28px; /* Decrease font size for smaller screens */
+    }
+  
+    .about-content {
+      font-size: 16px; /* Decrease font size for smaller screens */
+      margin-right: 10px;
+    }
+  
+    .card-column-image {
+      width: 60px; /* Decrease image width for smaller screens */
+    }
+  
+    .card-column-details h3 {
+      font-size: 20px; /* Decrease heading font size for smaller screens */
+    }
+  
+    .card-column-details p {
+      font-size: 16px; /* Decrease paragraph font size for smaller screens */
+    }
+  }
+  
