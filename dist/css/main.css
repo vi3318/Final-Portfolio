@@ -52,7 +52,7 @@ html {
   }
   
   .text-blue {
-    color: #6E727D;
+    color:  #F3F4F6;
   }
   
   .text-white {
@@ -481,7 +481,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #9C9FA8;
+  color: black;
   text-decoration: none; /* Remove underline */
 }
 
@@ -618,35 +618,44 @@ nav ul li a:hover {
     z-index: 1; /* Ensure the wave icon is above the profile image */
   }
   
-  @media screen and (max-width: 440px) {
-
-    header .hero {
-      top: 0%;
-      transform: translate(-50%, -75%);
+  
+    @media screen and (max-width: 441px){
+      .wave {
+        right: 155px;
+      }
+      header{
+          min-height: 65vh !important;
+      }
     }
-    .wave {
-      right: 135px;
-    }
-
-    header{
-      height: 40vh !important;
-    }
-
     
+  
+
+    @media screen and (max-width: 415px){
+      .wave {
+        right: 145px;
+      }
+      header{
+          min-height: 75vh !important;
+      }
+    }
+
+
+    @media screen and (max-width: 413px){
+      .wave {
+        right: 145px;
+      }
+      header{
+          min-height: 70vh !important;
+      }
+    }
     
-  }
 
   @media screen and (max-width: 396px) {
-
-    header .hero {
-      top: 0%;
-      transform: translate(-50%, -50%);
-    }
     .wave {
       right: 135px;
     }
     header{
-      height: 40vh !important;
+      min-height: 70vh !important;
     
     }
   
@@ -654,12 +663,11 @@ nav ul li a:hover {
 
   @media screen and (max-width: 376px) {
 
-    header .hero {
-      top: 0%;
-      transform: translate(-50%, -50%);
-    }
     .wave {
       right: 135px;
+    }
+    header{
+      min-height: 80vh !important;
     }
 
   }
@@ -1011,20 +1019,21 @@ nav ul li a:hover {
     flex-wrap: wrap;
   }
   .contact .card-container .card {
-    background: #F3F4F6;
-    width: 260px;
-    margin: 20px;
-    padding: 30px;
+    background: #181E2D;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
     border-radius: 3px;
+    
   }
   .contact .card-container .card i {
     font-size: 3.5rem;
-    color: #181E2D;
+    color: #F3F4F6;
     margin-bottom: 1rem;
     transition: 0.4s;
   }
@@ -1034,7 +1043,15 @@ nav ul li a:hover {
   .contact .card-container .card > * {
     margin: 0.5rem;
   }
-
+  @media (max-width: 420px) {
+    .contact .card-container {
+      margin-bottom: 1rem;
+     
+    }
+    .contact .card-container .card{
+      width: 150px;
+    }
+  }
   #main-content {
     opacity: 0;
     visibility: hidden;
@@ -1071,7 +1088,7 @@ nav ul li a:hover {
   }
   
   .about-text {
-    width: 50%;
+    width: 70%;
     font-size: 18px;
     line-height: 1.6;
     text-align: left;
@@ -1080,23 +1097,23 @@ nav ul li a:hover {
   .education-card {
     background-color: #f5f5f5;
     padding: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 50%; /* Adjusted width for better layout */
+    width: 30%; /* Adjusted width for better layout */
   }
   
-  .education-card-column {
-    display: flex;
-    align-items: flex-start;
-  }
+
   
   .card-column-image {
-    width: 80px;
-    margin-right: 20px;
+    width: 140px ;
+    height: 80px ;
   }
   
   .card-column-image img {
-    max-width: 100%;
+    max-width: 100% !important;
+    height: 80px !important;
   }
   
   .card-column-details {
@@ -1141,6 +1158,12 @@ nav ul li a:hover {
       width: 100%; /* Full width on smaller screens */
       margin-bottom: 20px; /* Add some bottom margin between cards */
     }
+    .card-column-image img {
+      max-width: 120% !important;
+      height: 70px !important;
+      padding-right: 0px;
+      margin-right: 10px;
+    }
   }
   
   @media only screen and (max-width: 480px) {
@@ -1166,4 +1189,10 @@ nav ul li a:hover {
  
     }
   }
-  
+
+/* manage particle-js on 414 and 430 max width*/
+
+.icon-heading{
+  color: white;
+}
+
