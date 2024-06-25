@@ -631,6 +631,8 @@ nav ul li a:hover {
     header{
       height: 40vh !important;
     }
+
+    
     
   }
 
@@ -647,7 +649,7 @@ nav ul li a:hover {
       height: 40vh !important;
     
     }
-
+  
   }
 
   @media screen and (max-width: 376px) {
@@ -774,6 +776,10 @@ nav ul li a:hover {
     }
     header .hero p {
       width: 100%;
+    }
+
+    header{
+      height: 60vh;
     }
   }
   @media screen and (min-height: 900px) {
@@ -1157,6 +1163,7 @@ nav ul li a:hover {
   
     .card-column-details p {
       font-size: 16px; /* Decrease paragraph font size for smaller screens */
+ 
     }
   }
   
