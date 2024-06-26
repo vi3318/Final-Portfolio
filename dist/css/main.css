@@ -1197,3 +1197,18 @@ nav ul li a:hover {
   color: white;
 }
 
+
+.btn{
+  color: black;
+}
+.btn-arrow{
+  color: black;
+}
+
+#btn-back-to-top {
+  color: black;
+  position: fixed;
+  bottom: 60px;
+  left: 30px;
+  display: none;
+}
