@@ -1145,18 +1145,18 @@ nav ul li a:hover {
   
   @media only screen and (max-width: 768px) {
     .about-container {
-      flex-direction: column; /* Align items one below the other on smaller screens */
-      padding: 20px; /* Reduce padding for smaller screens */
+      flex-direction: column; 
+      padding: 20px; 
       margin: 0px 10px;
     }
   
     .about-text {
-      width: 100%; /* Full width on smaller screens */
+      width: 100%;
     }
   
     .education-card {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px; /* Add some bottom margin between cards */
+      width: 100%; 
+      margin-bottom: 20px; 
       padding-right: 0px !important;
     }
     .card-column-image img {
